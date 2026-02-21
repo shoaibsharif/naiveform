@@ -2,6 +2,7 @@ import { api } from "@repo/convex";
 import type { Id } from "@repo/convex/dataModel";
 import { Hono } from "hono";
 import { getClient } from "./clients";
+import { handle } from "hono/vercel";
 
 const app = new Hono();
 
@@ -95,4 +96,4 @@ app.post("/f/:formId", async (c) => {
 //   }
 // });
 
-export default app;
+export default handle(app);
