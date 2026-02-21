@@ -3,10 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/index.js",
   "scripts": {
     "dev": "PORT=4000 bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --outdir dist",
+    "build": "tsc",
     "lint": "eslint .",
     "check-types": "tsc --noEmit"
   },
